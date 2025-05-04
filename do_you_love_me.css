@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.question-container {
+  text-align: center;
+  position: relative;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 105, 135, 0.5);
+  max-width: 400px;
+  width: 90%;
+}
+
+.question {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ff4081;
+}
+
+.yes-btn,
+.no-btn {
+  font-size: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+}
+
+.yes-btn {
+  background-color: #ff4081;
+  color: white;
+  left: 70px;
+}
+
+.no-btn {
+  background-color: #f8bbd0;
+  color: #880e4f;
+  left: 200px;
+}
+
+.yes-btn:hover {
+  background-color: #f06292;
+  transform: scale(1.1);
+}
+
+.result-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cssload-main {
+  display: none;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.cssload-heart {
+  width: 100px;
+  height: 90px;
+  position: relative;
+  transform: rotate(-45deg);
+  animation: pulse 1s infinite;
+}
+
+.cssload-heart::before,
+.cssload-heart::after {
+  content: "";
+  width: 100px;
+  height: 90px;
+  background: #e91e63;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.cssload-heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.cssload-heart::after {
+  left: 50px;
+  top: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(-45deg);
+  }
+  100% {
+    transform: scale(1) rotate(-45deg);
+  }
+}
+
+.result-container h1 {
+  font-size: 2.2rem;
+  color: #d81b60;
+  margin-bottom: 1rem;
+}
+
+.gif-result {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 64, 129, 0.4);
+}
